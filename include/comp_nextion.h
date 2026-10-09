@@ -21,7 +21,7 @@ KOMPONEN : speed, rpm, rrpm, batt, v_bat, c_bat, t_con, t_bat, bt0
 #define NEXTION_TX_PIN     27
 #define NEXTION_RX_PIN     26
 #define NEXTION_BAUD       9600
-#define NEXTION_UART_NUM   2
+#define NEXTION_UART_NUM   3
 #define NEXTION_CMD_MAX    64
 
 // ---------------- Data ----------------

@@ -6,17 +6,18 @@
 #include "acq_bms.h"
 #include "acq_motcon.h"
 #include "comp_nextion.h"
+#include "comp_data.h"
 #include "telem_e34.h"
 #include "com_mircosd.h"
 
 // ---------------- Config timing (ms) ----------------
-#define RTC_PERIOD_MS      1000
+#define RTC_PERIOD_MS      10
 #define GPS_PERIOD_MS      50
-#define BMS_PERIOD_MS      1000
+// #define BMS_PERIOD_MS      10
 #define MOTCON_PERIOD_MS   5
-#define NEXTION_PERIOD_MS  500
-#define TELEM_PERIOD_MS    1000
-#define SD_PERIOD_MS       1000
+#define NEXTION_PERIOD_MS  50
+#define TELEM_PERIOD_MS    50
+#define SD_PERIOD_MS       100
 
 // ---------------- Tasks ----------------
 static void taskRtc(void*) {
@@ -59,8 +60,7 @@ static void taskSd(void*) {
 
 // ---------------- Setup ----------------
 void setup() {
-  // dataInit();  // shared data harus siap sebelum task jalan
-
+  compStartTasks();
   //                 fungsi         nama        stack  arg   prio  handle core
   xTaskCreatePinnedToCore(taskMotcon,    "motcon",   3072, NULL, 4, NULL, 1);
   xTaskCreatePinnedToCore(taskBms,       "bms",      4096, NULL, 3, NULL, 1);

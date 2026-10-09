@@ -24,7 +24,7 @@ PAKAI
 
 // ---------------- konfigurasi ----------------
 #ifndef BMS_PERIOD_MS
-#define BMS_PERIOD_MS 1000          // periode polling
+#define BMS_PERIOD_MS 10          // periode polling
 #endif
 
 #define BMS_SERIAL          Serial2

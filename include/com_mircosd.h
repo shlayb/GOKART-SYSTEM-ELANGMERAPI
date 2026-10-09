@@ -17,6 +17,15 @@ BUFFER : SN74HC125 (quad bus buffer, OE aktif LOW)
   VCC = 3.3V, GND = GND
   4OE disambung ke CS supaya MISO hanya aktif saat SD dipilih,
   sehingga SD tidak mengganggu perangkat lain di bus VSPI yang sama.
+
+  DATA YANG INGIN DI LOGGING
+  1. BMS
+  2. GPS
+  3. MOTOR CONTROLLER
+  4. RTC
+  5. COMP DATA
+  6. LAP TIME
+  7. NEXTION DATA
 */
 
 #include <Arduino.h>

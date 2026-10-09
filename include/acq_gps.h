@@ -16,7 +16,7 @@ FORMAT : 8N1, NMEA
 #define GPS_PIN_TX      25
 #define GPS_PIN_RX      35
 #define GPS_BAUD        9600
-#define GPS_UART_NUM    2          // UART2
+#define GPS_UART_NUM    4          // UART2
 #define GPS_RX_BUF      1024
 
 // ---------------- DATA ----------------
